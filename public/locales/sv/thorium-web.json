@@ -104,5 +104,13 @@
                 }
             }
         }
+    },
+    "audio": {
+        "player": {
+            "progress": "Läsposition",
+            "controls": "Uppspelningskontroller",
+            "mediaControls": "Ljudinställningar",
+            "coverAlt": "Omslag för ljudbok"
+        }
     }
 }
