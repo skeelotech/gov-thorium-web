@@ -86,8 +86,7 @@ import classNames from "classnames";
 import debounce from "debounce";
 import { buildThemeObject } from "@/preferences/helpers/buildThemeObject";
 import { createDefaultPlugin } from "../Plugins/helpers/createDefaultPlugin";
-import { NavPeripheralType, navKeyboardPeripherals } from "../../helpers/peripherals";
-import { isInteractiveElement } from "@/core/Helpers/focusUtilities";
+import { NavPeripheralType } from "../../helpers/peripherals";
 import { getPlatformModifier } from "@/core/Helpers/keyboardUtilities";
 import { getReaderClassNames } from "../Helpers/getReaderClassNames";
 import { resolveContentProtectionConfig } from "@/preferences/models/protection";
@@ -520,7 +519,7 @@ const StatefulReaderInner = ({ publication, localDataKey, positionStorage, conta
     colorScheme,
     isFXL,
     contentProtectionConfig: resolveContentProtectionConfig(preferences.contentProtection, t),
-    keyboardPeripherals: navKeyboardPeripherals,
+
     onNavigatorReady: () => {
       dispatch(setLoading(false));
     },
