@@ -107,8 +107,8 @@ export const defaultActionKeysObject: ThActionsTokens = {
 export const defaultSettingsAction: ThActionsTokens = {
   visibility: ThCollapsibilityVisibility.partially,
   shortcut: {
-    label: "D",
-    keyCombos: [{ keyCode: 68, shift: true, alt: true, suppressOnInteractiveElement: TEXT_INPUT_SELECTORS }]
+    label: "P",
+    keyCombos: [{ keyCode: 80, shift: true, alt: true, suppressOnInteractiveElement: TEXT_INPUT_SELECTORS }]
   },
   sheet: {
     defaultSheet: ThSheetTypes.popover,

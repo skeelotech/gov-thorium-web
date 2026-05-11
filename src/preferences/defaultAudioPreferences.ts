@@ -166,7 +166,8 @@ export const defaultAudioPreferences: ThAudioPreferences<AudioDefaultKeys> =
 
     shortcuts: {
       representation: ShortcutRepresentation.symbol,
-      joiner: "+"
+      joiner: "+",
+      displayInTooltip: true
     },
 
     docking: {
