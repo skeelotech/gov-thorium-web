@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@edrlab/thorium-locales':
         specifier: github:edrlab/thorium-locales
-        version: thorium-locales@https://codeload.github.com/edrlab/thorium-locales/tar.gz/4a9e7d687d9469ffd1c9fa153cb2b7fc93b15cb8
+        version: thorium-locales@https://codeload.github.com/edrlab/thorium-locales/tar.gz/34a2891445d535c120a5cebcacd82170b37899ea
       '@readium/css':
         specifier: ^2.0.4
         version: 2.0.4
@@ -3897,8 +3897,8 @@ packages:
   thenify@3.3.1:
     resolution: {integrity: sha512-RVZSIV5IG10Hk3enotrhvz0T9em6cyHBLkH/YAZuKqd8hRkKhSfCGIcP2KUY0EPxndzANBmNllzWPwak+bheSw==}
 
-  thorium-locales@https://codeload.github.com/edrlab/thorium-locales/tar.gz/4a9e7d687d9469ffd1c9fa153cb2b7fc93b15cb8:
-    resolution: {tarball: https://codeload.github.com/edrlab/thorium-locales/tar.gz/4a9e7d687d9469ffd1c9fa153cb2b7fc93b15cb8}
+  thorium-locales@https://codeload.github.com/edrlab/thorium-locales/tar.gz/34a2891445d535c120a5cebcacd82170b37899ea:
+    resolution: {tarball: https://codeload.github.com/edrlab/thorium-locales/tar.gz/34a2891445d535c120a5cebcacd82170b37899ea}
     version: 1.0.0
 
   tinyexec@0.3.2:
@@ -6312,7 +6312,7 @@ snapshots:
 
   '@readium/shared@2.2.0':
     dependencies:
-      '@edrlab/thorium-locales': thorium-locales@https://codeload.github.com/edrlab/thorium-locales/tar.gz/4a9e7d687d9469ffd1c9fa153cb2b7fc93b15cb8
+      '@edrlab/thorium-locales': thorium-locales@https://codeload.github.com/edrlab/thorium-locales/tar.gz/34a2891445d535c120a5cebcacd82170b37899ea
 
   '@reduxjs/toolkit@2.11.2(react-redux@9.2.0(@types/react@19.2.14)(react@19.2.4)(redux@5.0.1))(react@19.2.4)':
     dependencies:
@@ -8685,7 +8685,7 @@ snapshots:
     dependencies:
       any-promise: 1.3.0
 
-  thorium-locales@https://codeload.github.com/edrlab/thorium-locales/tar.gz/4a9e7d687d9469ffd1c9fa153cb2b7fc93b15cb8: {}
+  thorium-locales@https://codeload.github.com/edrlab/thorium-locales/tar.gz/34a2891445d535c120a5cebcacd82170b37899ea: {}
 
   tinyexec@0.3.2: {}
 
