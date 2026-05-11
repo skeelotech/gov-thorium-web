@@ -6,16 +6,13 @@ import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 import { setFontSize } from "@/lib/settingsReducer";
 import { setWebPubZoom } from "@/lib/webPubSettingsReducer";
 import { useEffectiveRange } from "./useEffectiveRange";
-import { EpubPreferencesEditor, WebPubPreferencesEditor } from "@readium/navigator";
+import { EpubPreferencesEditor, IEpubPreferences, IWebPubPreferences, WebPubPreferencesEditor } from "@readium/navigator";
+import { useEpubNavigator } from "@/core/Hooks/Epub/useEpubNavigator";
+import { useWebPubNavigator } from "@/core/Hooks/WebPub/useWebPubNavigator";
 
-type ZoomNavigator = {
-  getSetting: (key: any) => number | null | undefined;
-  submitPreferences: (prefs: any) => Promise<void>;
-  preferencesEditor?: any;
-};
+type ZoomNavigator = ReturnType<typeof useEpubNavigator> | ReturnType<typeof useWebPubNavigator>;
 
 export const useZoomCallbacks = (navigator: ZoomNavigator) => {
-  const { getSetting, submitPreferences, preferencesEditor } = navigator;
   const { preferences } = usePreferences();
   const readerProfile = useAppSelector(state => state.reader.profile);
   const isFXL = useAppSelector(state => state.publication.isFXL);
@@ -23,10 +20,14 @@ export const useZoomCallbacks = (navigator: ZoomNavigator) => {
 
   const isWebPub = readerProfile === "webPub";
 
+  const getSetting = navigator.getSetting as (key: string) => number | null | undefined;
+  const submitPreferences = navigator.submitPreferences as (prefs: IEpubPreferences | IWebPubPreferences) => Promise<void>;
+  const { preferencesEditor } = navigator;
+
   const supportedRange = isWebPub
     ? (preferencesEditor as WebPubPreferencesEditor)?.zoom?.supportedRange
     : isFXL
-      ? (preferencesEditor as any)?.zoom?.supportedRange
+      ? (preferencesEditor as unknown as WebPubPreferencesEditor)?.zoom?.supportedRange
       : (preferencesEditor as EpubPreferencesEditor)?.fontSize?.supportedRange;
 
   const zoomConfig = preferences.settings.keys[ThSettingsKeys.zoom];
