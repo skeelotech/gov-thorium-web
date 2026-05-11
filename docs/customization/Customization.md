@@ -203,6 +203,20 @@ shortcuts: {
 
 Will display shortcuts as `Alt+Shift+{ Key }`.
 
+### Display in tooltip
+
+Set `displayInTooltip` to `true` to show the action's keyboard shortcut inside the action icon's tooltip, alongside the label.
+
+```typescript
+shortcuts: {
+  representation: ShortcutRepresentation.symbol,
+  joiner: "+",
+  displayInTooltip: true
+}
+```
+
+The shortcut is rendered using the same `ShortcutRepresentation` and `joiner` settings as elsewhere. Actions with no shortcut configured are unaffected.
+
 ## Actions
 
 Action Components can be a simple trigger (e.g. fullscreen), or a combination of a trigger and a sheet/container (e.g. Settings, Toc). This should explain why a lot of their properties are optional when configured in `keys`.

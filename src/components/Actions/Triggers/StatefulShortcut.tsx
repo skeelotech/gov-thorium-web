@@ -1,6 +1,7 @@
 "use client";
 
-import React from "react";
+import { KeyCombo } from "@readium/navigator-html-injectables";
+import { I18nValue } from "@/preferences/models/i18n";
 
 import { Keyboard } from "react-aria-components";
 
@@ -9,8 +10,6 @@ import { ThShortcutConfig } from "@/preferences/models/actions";
 import { useSharedPreferences } from "@/preferences/hooks/useSharedPreferences";
 import { useAppSelector } from "@/lib/hooks";
 import { useI18n } from "@/i18n/useI18n";
-import type { KeyCombo } from "@readium/navigator-html-injectables";
-import type { I18nValue } from "@/preferences/models/i18n";
 
 const DIGIT_OFFSET = 48;
 const F_KEY_OFFSET = 112;
