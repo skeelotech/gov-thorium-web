@@ -3,7 +3,6 @@
 import { useCallback, useEffect, useState, useRef } from "react";
 
 import { Locator, Publication } from "@readium/shared";
-import { ThLineHeightOptions } from "@/preferences/models";
 import { EpubNavigatorListeners, IContentProtectionConfig, ILinkInjectable, IBlobInjectable } from "@readium/navigator";
 import { useEpubKeyboardPeripherals } from "./useEpubKeyboardPeripherals";
 import { ThPreferences } from "@/preferences";
@@ -31,7 +30,6 @@ interface UseEpubReaderInitProps {
   getFontInjectables: (options?: { language?: string } | { key?: string }, optimize?: boolean) => InjectableFontResources | null;
   fxlThemeKeys: string[];
   reflowThemeKeys: string[];
-  lineHeightOptions: Record<ThLineHeightOptions, number | null>;
   arrowsOccupySpace: boolean;
   arrowsWidth: React.RefObject<number>;
   colorScheme: any;
@@ -60,7 +58,6 @@ export const useEpubReaderInit = ({
   getFontInjectables,
   fxlThemeKeys,
   reflowThemeKeys,
-  lineHeightOptions,
   arrowsOccupySpace,
   arrowsWidth,
   colorScheme,
@@ -82,7 +79,6 @@ export const useEpubReaderInit = ({
     arrowsWidth,
     preferences,
     getFontMetadata,
-    lineHeightOptions,
     fxlThemeKeys,
     reflowThemeKeys,
   });
