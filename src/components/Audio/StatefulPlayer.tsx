@@ -392,7 +392,6 @@ const StatefulPlayerInner = ({ publication, localDataKey, positionStorage, cover
             <article
               ref={ wrapperRef }
               className={ isExpanded ? audioStyles.audioPlayerWrapperExpanded : audioStyles.audioPlayerWrapper }
-              aria-label={ t("reader.app.publicationWrapper") }
             >
               { isExpanded ? (
                 <>
