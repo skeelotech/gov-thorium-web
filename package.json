@@ -9,6 +9,7 @@
     "web reader"
   ],
   "license": "BSD-3-Clause",
+  "packageManager": "pnpm@11.1.0",
   "author": {
     "name": "EDRLab",
     "url": "https://www.edrlab.org"
