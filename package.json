@@ -9,7 +9,6 @@
     "web reader"
   ],
   "license": "BSD-3-Clause",
-  "packageManager": "pnpm@11.1.0",
   "author": {
     "name": "EDRLab",
     "url": "https://www.edrlab.org"
@@ -52,7 +51,7 @@
     "packageManager": {
       "name": "pnpm",
       "version": ">=11.0.0",
-      "onFail": "download"
+      "onFail": "warn"
     }
   },
   "scripts": {
