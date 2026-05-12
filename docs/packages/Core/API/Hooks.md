@@ -332,6 +332,14 @@ function useReducedTransparency(
 
 ## Utility Hooks
 
+### useObservableCondition
+
+Converts React boolean state to ObservableCondition objects required by Readium Navigator peripherals API, enabling dynamic conditional behavior for keyboard and input peripherals.
+
+```typescript
+function useObservableCondition(value: boolean): ObservableCondition
+```
+
 ### useDocumentTitle
 
 Manages document title.
