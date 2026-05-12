@@ -47,6 +47,13 @@
     "./webpub": "./dist/components/WebPub/index.mjs",
     "./webpub/styles": "./dist/components/WebPub/index.css"
   },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": ">=11.0.0",
+      "onFail": "download"
+    }
+  },
   "scripts": {
     "dev": "next dev",
     "build": "pnpm extract-locales && next build",
