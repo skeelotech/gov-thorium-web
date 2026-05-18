@@ -25,7 +25,7 @@ jobs:
           scope: '@skeelotech'
 
       - name: Install pnpm
-        run: npm install -g pnpm
+        run: npm install -g pnpm@10.11.1
 
       - name: Write resolved auth token to npmrc files
         env:
@@ -43,8 +43,15 @@ jobs:
           printf 'block-exotic-subdeps=false\n' >> .npmrc
           printf '@jsr:registry=https://npm.jsr.io/\n' >> .npmrc
 
+      - name: Debug pnpm config
+        run: |
+          pnpm --version
+          pnpm config list
+          cat .npmrc || true
+          cat $HOME/.npmrc || true
+
       - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile --config.block-exotic-subdeps=false
+        run: pnpm install --no-frozen-lockfile --config.block-exotic-subdeps=false --config.ignore-scripts=false
 
       - name: Build bundle
         run: pnpm bundle
