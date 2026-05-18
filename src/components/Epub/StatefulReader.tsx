@@ -312,7 +312,7 @@ const StatefulReaderInner = ({ publication, localDataKey, positionStorage, conta
     const _cframes = getCframes();
     if (_cframes) {
       if (!cache.current.settings.scroll) {
-        const oneQuarter = ((_cframes.length === 2 ? _cframes[0]!.window.innerWidth + _cframes[1]!.window.innerWidth : _cframes![0]!.window.innerWidth) * window.devicePixelRatio) / 4;
+        const oneQuarter = ((_cframes.length === 2 ? _cframes[0]!.window!.innerWidth + _cframes[1]!.window!.innerWidth : _cframes![0]!.window!.innerWidth) * window.devicePixelRatio) / 4;
         
         const navigationCallback = () => {
           dispatch(setUserNavigated(true));
