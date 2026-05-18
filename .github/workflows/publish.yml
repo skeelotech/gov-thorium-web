@@ -27,10 +27,19 @@ jobs:
       - name: Install pnpm
         run: npm install -g pnpm
 
+      - name: Write .npmrc with resolved token for pnpm
+        env:
+          GH_PAT: ${{ secrets.GOV_GH_PACKAGES_PAT }}
+        run: |
+          cat > .npmrc << EOF
+          @skeelotech:registry=https://npm.pkg.github.com
+          //npm.pkg.github.com/:_authToken=${GH_PAT}
+          ignore-scripts=true
+          @jsr:registry=https://npm.jsr.io/
+          EOF
+
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GOV_GH_PACKAGES_PAT }}
 
       - name: Build bundle
         run: pnpm bundle
