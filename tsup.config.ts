@@ -52,6 +52,10 @@ export default defineConfig({
     "@readium/css",
     "@readium/navigator",
     "@readium/navigator-html-injectables",
-    "@readium/shared"
+    "@readium/shared",
+    "@skeelotech/gov-readium-css",
+    "@skeelotech/gov-readium-navigator",
+    "@skeelotech/gov-readium-navigator-html-injectables",
+    "@skeelotech/gov-readium-shared"
   ]
 });

@@ -19,7 +19,11 @@
     "paths": {
       "@/*": ["./src/*"],
       "react": [ "./node_modules/@types/react" ],
-      "immer": ["./node_modules/immer"]
+      "immer": ["./node_modules/immer"],
+      "@readium/shared": ["./node_modules/@skeelotech/gov-readium-shared"],
+      "@readium/navigator": ["./node_modules/@skeelotech/gov-readium-navigator"],
+      "@readium/navigator-html-injectables": ["./node_modules/@skeelotech/gov-readium-navigator-html-injectables"],
+      "@readium/css": ["./node_modules/@skeelotech/gov-readium-css"]
     }
   },
   "include": [
