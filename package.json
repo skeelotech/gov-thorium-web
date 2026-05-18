@@ -1,6 +1,6 @@
 {
-  "name": "@skeelotech/thorium-web",
-  "description": "Play with the capabilities of the Readium Web toolkit (skeelotech fork)",
+  "name": "@skeelotech/gov-thorium-web",
+  "description": "Play with the capabilities of the Readium Web toolkit (gov-books fork)",
   "keywords": [
     "edrlab",
     "thorium",
@@ -15,12 +15,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/skeelotech/thorium-web.git"
+    "url": "https://github.com/skeelotech/gov-thorium-web.git"
   },
   "bugs": {
-    "url": "https://github.com/skeelotech/thorium-web/issues"
+    "url": "https://github.com/skeelotech/gov-thorium-web/issues"
   },
-  "version": "1.5.0-skeelo.1",
+  "version": "1.5.0-gov.1",
   "private": false,
   "publishConfig": {
     "registry": "https://npm.pkg.github.com",
@@ -68,10 +68,10 @@
     "increment": "node scripts/increment.mjs"
   },
   "peerDependencies": {
-    "@skeelotech/readium-css": "^2.0.5-skeelo.1",
-    "@skeelotech/readium-navigator": "^2.5.4-skeelo.1",
-    "@skeelotech/readium-navigator-html-injectables": "^2.4.2-skeelo.1",
-    "@skeelotech/readium-shared": "^2.2.0-skeelo.1",
+    "@skeelotech/gov-readium-css": "^2.0.5-gov.1",
+    "@skeelotech/gov-readium-navigator": "^2.5.4-gov.1",
+    "@skeelotech/gov-readium-navigator-html-injectables": "^2.4.2-gov.1",
+    "@skeelotech/gov-readium-shared": "^2.2.0-gov.1",
     "@reduxjs/toolkit": "^2.11.2",
     "i18next": "^25.8.13",
     "i18next-browser-languagedetector": "^8.2.1",
@@ -89,10 +89,10 @@
   },
   "dependencies": {
     "@edrlab/thorium-locales": "github:edrlab/thorium-locales",
-    "@skeelotech/readium-css": "2.0.5-skeelo.1",
-    "@skeelotech/readium-navigator": "2.5.4-skeelo.1",
-    "@skeelotech/readium-navigator-html-injectables": "2.4.2-skeelo.1",
-    "@skeelotech/readium-shared": "2.2.0-skeelo.1",
+    "@skeelotech/gov-readium-css": "2.0.5-gov.1",
+    "@skeelotech/gov-readium-navigator": "2.5.4-gov.1",
+    "@skeelotech/gov-readium-navigator-html-injectables": "2.4.2-gov.1",
+    "@skeelotech/gov-readium-shared": "2.2.0-gov.1",
     "@reduxjs/toolkit": "^2.11.2",
     "classnames": "^2.5.1",
     "colorthief": "^3.3.1",
