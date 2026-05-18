@@ -41,6 +41,7 @@ jobs:
           printf '@skeelotech:registry=https://npm.pkg.github.com\n' > .npmrc
           printf '//npm.pkg.github.com/:_authToken=%s\n' "$GH_PAT" >> .npmrc
           printf 'ignore-scripts=true\n' >> .npmrc
+          printf 'block-exotic-subdeps=false\n' >> .npmrc
           printf '@jsr:registry=https://npm.jsr.io/\n' >> .npmrc
 
       - name: Install dependencies
