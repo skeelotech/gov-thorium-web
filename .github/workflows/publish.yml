@@ -45,7 +45,7 @@ jobs:
           printf '@jsr:registry=https://npm.jsr.io/\n' >> .npmrc
 
       - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
+        run: pnpm install --no-frozen-lockfile --config.block-exotic-subdeps=false
 
       - name: Build bundle
         run: pnpm bundle
