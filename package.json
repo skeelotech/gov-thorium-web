@@ -129,6 +129,11 @@
     "typescript": "^5.9.3"
   },
   "pnpm": {
-    "blockExoticSubdeps": false
+    "blockExoticSubdeps": false,
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp",
+      "unrs-resolver"
+    ]
   }
 }
