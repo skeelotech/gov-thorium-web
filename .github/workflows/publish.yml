@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_READ_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GOV_GH_PACKAGES_PAT }}
 
       - name: Build bundle
         run: pnpm bundle
@@ -38,4 +38,4 @@ jobs:
       - name: Publish
         run: pnpm publish --no-git-checks
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GOV_GH_PACKAGES_PAT }}
