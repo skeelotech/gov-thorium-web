@@ -27,10 +27,17 @@ jobs:
       - name: Install pnpm
         run: npm install -g pnpm
 
-      - name: Write .npmrc with resolved token for pnpm
+      - name: Write resolved auth token to npmrc files
         env:
           GH_PAT: ${{ secrets.GOV_GH_PACKAGES_PAT }}
         run: |
+          AUTH_LINE="//npm.pkg.github.com/:_authToken=$GH_PAT"
+          SCOPE_LINE="@skeelotech:registry=https://npm.pkg.github.com"
+          # Overwrite the setup-node temp npmrc with resolved token
+          printf '%s\n%s\n' "$SCOPE_LINE" "$AUTH_LINE" > "$NPM_CONFIG_USERCONFIG"
+          # Also write to home .npmrc for pnpm
+          printf '%s\n%s\n' "$SCOPE_LINE" "$AUTH_LINE" >> "$HOME/.npmrc"
+          # And to the project .npmrc
           printf '@skeelotech:registry=https://npm.pkg.github.com\n' > .npmrc
           printf '//npm.pkg.github.com/:_authToken=%s\n' "$GH_PAT" >> .npmrc
           printf 'ignore-scripts=true\n' >> .npmrc
