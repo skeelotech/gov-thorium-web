@@ -31,12 +31,10 @@ jobs:
         env:
           GH_PAT: ${{ secrets.GOV_GH_PACKAGES_PAT }}
         run: |
-          cat > .npmrc << EOF
-          @skeelotech:registry=https://npm.pkg.github.com
-          //npm.pkg.github.com/:_authToken=${GH_PAT}
-          ignore-scripts=true
-          @jsr:registry=https://npm.jsr.io/
-          EOF
+          printf '@skeelotech:registry=https://npm.pkg.github.com\n' > .npmrc
+          printf '//npm.pkg.github.com/:_authToken=%s\n' "$GH_PAT" >> .npmrc
+          printf 'ignore-scripts=true\n' >> .npmrc
+          printf '@jsr:registry=https://npm.jsr.io/\n' >> .npmrc
 
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
